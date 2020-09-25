@@ -1,0 +1,11 @@
+date	:20200120
+size	:(640,640)
+root	:D:/Users/takami.h/Desktop/Amedproject
+model_path	:./model/unet_2d_weights.hdf5
+amedroot_path	://aka/share/amed
+amedabdomen_path	://aka/share/amed/amed_abdomen/
+amedtest_path	://aka/share/amed/amed_abdomen/list/dataset/test.txt
+amedtrain_path	://aka/share/amed/amed_abdomen/list/dataset/train.txt
+amedresult_path	://aka/share/amed/amed_unet_result
+remaketestdata_path	:./image_data/testimage
+mydataset_path	:./my_testdata.txt
