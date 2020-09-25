@@ -5,3 +5,6 @@ function showSum() {
     console.log(sum);
     alert(sum);
 }
+
+var FuncBtn = document.getElementById("button");
+
