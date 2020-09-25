@@ -1,0 +1,4 @@
+date	:20200124
+make_dataset	://aka/share/amed/amed_liver_label/
+size	:(560,560)
+task	:"Image06","Image07","Image09","Image10","Image11","Image17","Image15_with_tumor","Amed_train_image"
