@@ -1,0 +1,53 @@
+Parameter.txtについて
+
+・目的
+pathの統一		：プログラム内に同じ文字列を書かないために
+プログラムの修正簡略化	：変数変えるのをこのテキストファイルのみで済ませたい
+逐次変わる状況に対応	：データ増加等によるpathの変動に対応するため
+
+・Parameter.txtの読み込み
+-プログラム内の[Read_Parameter]関数で読み込み
+-return dictで出力
+-dict内は{key:values}の関係で格納される
+-dict[key]でvaluesを呼び出す
+
+
+・txtの書き方
+以下の構成にすること
+---------------
+keys\t:values
+----------------
+
+keys	:キー
+\t	:tab
+:	:「:」
+values	:要素
+
+また，Parameter.txtの最後の行を改行にすると止まります(エラー処理は手間だったのでしてません)
+この構成にしないとread_Parameterの関数が動きません
+例)
+name	:chukyo-th
+
+
+以下　各keyの詳細
+---------------------------------------------------
+date			:Parameter.txt作成日
+size			:model作成時の画像サイズ
+root			:このプログラムまでのフルパス
+model_path		:modelまでのパス
+amedroot_path		:amed共通フォルダまでのパス
+amedabdomen_path	:amed腹部超音波画像データセットが置いてある場所までのpath
+amedtest_path		:腹部超音波画像データセットのtestデータまでのパス
+amedtrain_path		:腹部超音波画像データセットのtrainデータまでのパス
+amedresult_path		:推測結果を保存するフォルダまでのパス,基本的にはamed_unet_resultとする
+remakedataset_path	:アーチファクトの影響が大きいものを除いた,testデータの画像が入ったフォルダまでのパス
+mydataset_path		:再構築したtestデータのtextファイル
+
+
+---------------------------------------------------
+必要と感じたパラメータは追加すると楽です.
+一応辞書型でプログラム管理をする方としない方，2パターン置いとくので使いやすいほうを使用してください.
+system.py	:辞書型でプログラム管理
+system_old.py	:パラメータは各関数内で宣言
+
+
